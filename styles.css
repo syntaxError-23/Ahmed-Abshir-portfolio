@@ -1,0 +1,94 @@
+.nav {
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 75px;
+}
+.hero__greeting {
+  font-size: 20px;
+}
+.hero__intro {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.about-me {
+  text-align: center;
+  margin-bottom: 75px;
+}
+.about-me__img-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 90vw;
+  height: 25vh;
+  background-color: slateblue;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.skills {
+  text-align: center;
+}
+.skills__logos-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 90vw;
+  height: 25vh;
+  background-color: slateblue;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.projects__card {
+  background-color: rgb(193, 223, 249);
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.projects__card__img-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 90vw;
+  height: 25vh;
+  background-color: slateblue;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  padding: 10px 0;
+  color: white;
+  height: 15vh;
+}
+.footer__logos-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+.footer__logos-container__logo-placeholder {
+  background-color: rgb(107, 107, 216);
+  border-radius: 360%;
+  padding: 10px;
+}
+.footer__email {
+  margin: 0;
+}

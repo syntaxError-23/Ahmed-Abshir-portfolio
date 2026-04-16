@@ -1,0 +1,59 @@
+// -------------------- VARIABLES --------------------
+
+//---------- SCREEN SIZE VARIABLES ----------
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+// ----------- MIXINS - MEDIA QUERIES ----------
+@mixin sm-screen{
+    @media only screen and (max-width:$sm){
+        @content;
+    }
+}
+
+@mixin md-screen{
+     @media only screen and (min-width:calc($sm + 1px)) and (max-width: $md){
+        @content;
+    }
+}
+
+@mixin lg-screen{
+     @media only screen and (min-width:calc($md + 1px)) and (max-width: $lg){
+        @content;
+    }
+}
+
+@mixin xl-screen{
+     @media only screen and (min-width:calc($lg + 1px)) and (max-width: $xl){
+        @content;
+    }
+}
+
+@mixin xxl-screen{
+     @media only screen and (min-width:calc($xl + 1px)) and (max-width: $xxl){
+        @content;
+    }
+}
+
+// ---------- MIXINS - RECURRING ----------
+
+@mixin img-placeholder-lg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width:90vw;
+        height: 25vh;
+        background-color: slateblue;
+        margin: 0 auto;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 25px;
+}
+
+
+
+
