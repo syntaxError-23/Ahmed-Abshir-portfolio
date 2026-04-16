@@ -23,13 +23,13 @@
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  width: 90vw;
-  height: 25vh;
+  border-radius: 5px;
+  width: 95%;
+  height: 40vh;
   background-color: slateblue;
   margin: 0 auto;
   color: white;
   font-weight: bold;
-  margin-bottom: 25px;
 }
 
 .skills {
@@ -40,33 +40,64 @@
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  width: 90vw;
-  height: 25vh;
+  border-radius: 5px;
+  width: 95%;
+  height: 40vh;
   background-color: slateblue;
   margin: 0 auto;
   color: white;
   font-weight: bold;
-  margin-bottom: 25px;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .projects__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
   background-color: rgb(193, 223, 249);
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 5px;
+  width: 90vw;
 }
-.projects__card__img-placeholder {
+.projects__card__img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  width: 90vw;
-  height: 25vh;
+  border-radius: 5px;
+  width: 95%;
+  height: 40vh;
   background-color: slateblue;
   margin: 0 auto;
   color: white;
   font-weight: bold;
-  margin-bottom: 25px;
+  overflow: hidden;
+}
+.projects__card__img-container__img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.projects__card__text-wrapper {
+  width: 95%;
+}
+.projects__card__text-wrapper__tech-stack {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.projects__card__text-wrapper__name {
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.projects__card__text-wrapper__description {
+  font-size: 1.1em;
 }
 
 .footer {
