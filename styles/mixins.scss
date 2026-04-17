@@ -21,7 +21,8 @@ $xxl: 1536px;
 }
 
 @mixin lg-screen{
-     @media only screen and (min-width:calc($md + 1px)) and (max-width: $lg){
+     @media only screen and (min-width:calc($md + 1px))
+     {
         @content;
     }
 }
@@ -53,7 +54,7 @@ $xxl: 1536px;
 }
 
 @mixin format-image{
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -70,6 +71,43 @@ $xxl: 1536px;
     text-align: $text-align;
     font-size: $font-size;
 }
+
+@mixin format-button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: background-color 0.1s ease-out;
+    padding: 0; 
+}
+
+@mixin button-hover{
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgb(133, 176, 233);
+    cursor: pointer;
+}
+
+@mixin button-active{
+    background-color: rgba(106, 88, 243, 0.5);
+}
+
+@mixin link-in-button{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+@mixin link-in-button-hover{
+    color: rgb(44, 62, 161);
+}
+
+@mixin anchor-reset{
+    text-decoration: none;
+    color: inherit;
+}
+
+
 
 
 

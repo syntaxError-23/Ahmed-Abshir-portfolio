@@ -16,26 +16,37 @@
         <p class="nav__brand">Ahmed Abshir</p>
         
         <div class="nav__links-container">
-            <a href="" class="nav__link">Home</a>
-            <a href="" class="nav__link">About</a>
-            <a href="" class="nav__link">Projects</a>
-            <button class="nav__btn">Get in touch</button>
+            <a href="#home" class="nav__links-container__link">Home</a>
+            <a href="#about" class="nav__links-container__link">About</a>
+            <a href="#projects" class="nav__links-container__link">Projects</a>
+            <button class="nav__links-container__btn"><a href="#contact" class="nav__links-container__btn__link-in-btn">Get in touch</a></button>
         </div>
     </nav>
 <!-- -------------------- HERO -------------------- -->
-    <section class="hero">
-        <p class="hero__greeting">&#128075 Hey! I'm Ahmed Abshir</p>
-        <p class="hero__intro"> A Junior Software Developer based in the UK</p>
+    <section class="hero" id="home">
+        <p class="hero__greeting" >&#128075 Hey! I'm Ahmed</p>
+        <div class="hero__hero-contents">
+            <p class="hero__hero-contents__intro"> A Junior Software Developer based in the UK</p>
+            <div class="hero__hero-contents__img-container">
+                <img src="./assets/misc/programming.svg" alt="" class="hero__hero-contents__img-container__img">
+            </div>
+        </div>
+        
+        
     </section>
 <!-- -------------------- ABOUT ME -------------------- -->
-    <main class="about-me">
+    <main class="about-me" id="about">
         <h2 class="about-me__title">About Me</h2>
-        <div class="about-me__img-container">
-            <img src="./assets/misc/Developer-setup.jpg" alt="Desk with a computer set up" class="about-me__img-container__img">
+
+        <div class="about-me__contents-container">
+            <div class="about-me__contents-container__img-container">
+                <img src="./assets/misc/computer.jpg" alt="Desk with a computer set up" class="about-me__contents-container__img-container__img">
+            </div>
+            <p class="about-me__contents-container__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum ab ipsum quisquam, pariatur hic aut vitae reiciendis architecto blanditiis, harum temporibus asperiores saepe quidem, laborum dolores necessitatibus ea. Facilis.
+            Explicabo sapiente eos corporis minus animi ad veniam nostrum, minima quasi eaque suscipit, quisquam fugit optio expedita? Voluptas magni quos ratione, a, consequuntur reiciendis cupiditate perferendis fugit enim itaque quam.
+            Atque quae id excepturi dicta aspernatur consectetur dolor fugit veritatis? Vel, voluptatibus accusantium? Magni fuga nobis quam dolores quos tenetur, aut facere sequi recusandae libero optio quis autem explicabo vero?</p>
         </div>
-        <p class="about-me__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatum ab ipsum quisquam, pariatur hic aut vitae reiciendis architecto blanditiis, harum temporibus asperiores saepe quidem, laborum dolores necessitatibus ea. Facilis.
-        Explicabo sapiente eos corporis minus animi ad veniam nostrum, minima quasi eaque suscipit, quisquam fugit optio expedita? Voluptas magni quos ratione, a, consequuntur reiciendis cupiditate perferendis fugit enim itaque quam.
-        Atque quae id excepturi dicta aspernatur consectetur dolor fugit veritatis? Vel, voluptatibus accusantium? Magni fuga nobis quam dolores quos tenetur, aut facere sequi recusandae libero optio quis autem explicabo vero?</p>
+        
     </main>
 <!-- -------------------- SKILLS -------------------- -->
     <section class="skills">
@@ -80,7 +91,7 @@
     </section>
 
 <!-- -------------------- PROJECTS -------------------- -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <h2 class="projects__title">My Projects</h2>
 
         <!-- ----- CARD 1 ----- -->
@@ -98,10 +109,10 @@
 
             <div class="projects__card__btn-wrapper">
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Code &lt;/&gt;</a>
+                    <a href="https://github.com/syntaxError-23/chronos-app-react-2" class="projects__card__btn-wrapper__btn__link" target="_blank" >Code &lt;/&gt;</a>
                 </button>
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Preview &lt;/&gt;</a>
+                    <a href="https://syntaxerror-23.github.io/chronos-app-react-2/" class="projects__card__btn-wrapper__btn__link" target="_blank" >Preview &lt;/&gt;</a>
                 </button>
             </div>
         </article>
@@ -121,10 +132,10 @@
 
             <div class="projects__card__btn-wrapper">
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Code &lt;/&gt;</a>
+                    <a href="https://github.com/wallet-wizard/finance" class="projects__card__btn-wrapper__btn__link" target="_blank" >Code &lt;/&gt;</a>
                 </button>
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Preview &lt;/&gt;</a>
+                    <a href="https://wallet-wizard.github.io/finance/" class="projects__card__btn-wrapper__btn__link" target="_blank" >Preview &lt;/&gt;</a>
                 </button>
             </div>
         </article>
@@ -133,7 +144,7 @@
 
         <article class="projects__card">
             <div class="projects__card__img-container">
-                <img src="./assets/project-art/road.jpg" alt="Chronos Logo" class="projects__card__img-container__img">
+                <img src="./assets/project-art/road.jpg" alt="Empty road leading to mountain" class="projects__card__img-container__img">
             </div>
 
             <div class="projects__card__text-wrapper">
@@ -144,10 +155,10 @@
 
             <div class="projects__card__btn-wrapper">
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Code &lt;/&gt;</a>
+                    <a href="https://github.com/wallet-wizard/cv-master" class="projects__card__btn-wrapper__btn__link" target="_blank" >Code &lt;/&gt;</a>
                 </button>
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Preview &lt;/&gt;</a>
+                    <a href="https://cv-master.netlify.app/" class="projects__card__btn-wrapper__btn__link" target="_blank" >Preview &lt;/&gt;</a>
                 </button>
             </div>
         </article>
@@ -167,10 +178,10 @@
 
             <div class="projects__card__btn-wrapper">
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Code &lt;/&gt;</a>
+                    <a href="https://github.com/syntaxError-23/expense-report-app" class="projects__card__btn-wrapper__btn__link" target="_blank" >Code &lt;/&gt;</a>
                 </button>
                 <button class="projects__card__btn-wrapper__btn">
-                    <a href="" class="projects__card__btn-wrapper__btn__link">Preview &lt;/&gt;</a>
+                    <a href="https://syntaxerror-23.github.io/expense-report-app/" class="projects__card__btn-wrapper__btn__link" target="_blank" >Preview &lt;/&gt;</a>
                 </button>
             </div>
         </article>
@@ -178,9 +189,9 @@
 
     <!-- -------------------- FOOTER -------------------- -->
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <article class="footer__logos-container">
-                <a href="" class="footer__logos-container__logo-link">
+                <a target="_blank" href="https://github.com/syntaxError-23" class="footer__logos-container__logo-link">
                     <svg class="footer__logos-container__logo-link__logo-svg"xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from TDesign Icons by TDesign - https://github.com/Tencent/tdesign-icons/blob/main/LICENSE --><path fill="currentColor" d="M12 .999c-6.074 0-11 5.05-11 11.278c0 4.983 3.152 9.21 7.523 10.702c.55.104.727-.246.727-.543v-2.1c-3.06.683-3.697-1.33-3.697-1.33c-.5-1.304-1.222-1.65-1.222-1.65c-.998-.7.076-.686.076-.686c1.105.08 1.686 1.163 1.686 1.163c.98 1.724 2.573 1.226 3.201.937c.098-.728.383-1.226.698-1.508c-2.442-.286-5.01-1.253-5.01-5.574c0-1.232.429-2.237 1.132-3.027c-.114-.285-.49-1.432.107-2.985c0 0 .924-.303 3.026 1.156c.877-.25 1.818-.375 2.753-.38c.935.005 1.876.13 2.755.38c2.1-1.459 3.023-1.156 3.023-1.156c.598 1.554.222 2.701.108 2.985c.706.79 1.132 1.796 1.132 3.027c0 4.332-2.573 5.286-5.022 5.565c.394.35.754 1.036.754 2.088v3.095c0 .3.176.652.734.542C19.852 21.484 23 17.258 23 12.277C23 6.048 18.075.999 12 .999"/></svg>
                 </a>
                 <a href="" class="footer__logos-container__logo-link">
@@ -190,7 +201,7 @@
                     <svg class="footer__logos-container__logo-link__logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 2l.117.007a1 1 0 0 1 .876.876L13 3v4l.005.15a2 2 0 0 0 1.838 1.844L15 9h4l.117.007a1 1 0 0 1 .876.876L20 10v9a3 3 0 0 1-2.824 2.995L17 22H7a3 3 0 0 1-2.995-2.824L4 19V5a3 3 0 0 1 2.824-2.995L7 2zm-2.5 8A2.5 2.5 0 0 0 7 12.5v3a2.5 2.5 0 1 0 5 0a1 1 0 0 0-2 0a.5.5 0 1 1-1 0v-3a.5.5 0 1 1 1 0a1 1 0 0 0 2 0A2.5 2.5 0 0 0 9.5 10m6.743.03a1 1 0 0 0-1.213.727l-.53 2.119l-.53-2.119a1 1 0 1 0-1.94.486l1.5 6c.252 1.01 1.688 1.01 1.94 0l1.5-6a1 1 0 0 0-.727-1.213m-1.244-7.031L19 7h-4z"/></svg>
                 </a>
         </article>
-        <P class="footer__email">example@example.com </P>
+        <p class="footer__email">ahmed.abshir024@gmail.com</>
     </footer>
 </body>
 </html>

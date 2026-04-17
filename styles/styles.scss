@@ -3,11 +3,16 @@
 
 // ---------- VARIABLES ----------
 $card-bg: rgba(93, 179, 255, 0.1);
-$btn-hover: rgba(193, 223, 249, 0.85);
+$btn-hover: rgba(255, 255, 255, 0.85);
 $btn-active: rgba(106, 88, 243, 0.5);
-$content-font-size: clamp(1rem, 3vw, 1.5rem);
+$content-font-size: clamp(1.3rem, 3vw, 1.5rem);
 $content-font-size-sm: 1.1rem;
 // ---------- GLOBAL STYLES ----------
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
 body{
     @include mixins.miranda-font;
     background-color: rgb(238, 255, 255);
@@ -26,22 +31,118 @@ h3{
 // ---------- NAV STYLES ----------
 .nav{
     display: none;
+
+    // ----- NAV - LARGE SCREENS -----
+    @include mixins.lg-screen{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(208, 237, 237, 0.95);
+        border-radius: 5px;
+        box-shadow: 0px 13px 22px 12px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        &__brand{
+            margin-left: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: rgb(44, 77, 108);
+        }
+
+        &__links-container{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 50px;
+            align-items: center;
+            width: 40%;
+            font-weight: 500;
+
+            &__link{
+                @include mixins.anchor-reset;
+
+            }
+
+            &__btn{
+                @include mixins.format-button;
+
+                &:hover{
+                    @include mixins.button-hover;
+                }
+
+                &:active{
+                    @include mixins.button-active
+                }
+
+                &__link-in-btn{
+                    @include mixins.link-in-button;
+                    text-decoration: none;
+                    color: inherit;
+
+                    &:hover{
+                        @include mixins.link-in-button-hover
+                    }
+                }
+            }
+        }
+    }
 }
 
 // ---------- HERO STYLES ----------
 .hero{
     width: 100%;
-    margin-bottom: 75px;
+    margin-bottom: 100px;
 
     &__greeting{
         @include mixins.format-content-text($content-font-size-sm, 75%, 25px, left);
     }
 
-    &__intro{
-        @include mixins.format-content-text(clamp(2rem, 15vw, 6.5rem), 75%, 0, left);
-        // word-break: break-word;
-        font-weight: 600;
-        margin-top: 20px;
+    &__hero-contents{
+        &__intro{
+            @include mixins.format-content-text(clamp(2rem, 15vw, 6.5rem), 75%, 0, left);
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        &__img-container{
+            display: none;
+        }
+    }
+    
+    // ----- HERO - LARGER SCREENS -----
+    @include mixins.lg-screen{
+        padding: 10px;
+        min-height: 60vh;
+
+        &__greeting{
+            width: 95%;
+        }
+
+        &__hero-contents{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80%;
+
+            &__img-container{
+            display: block;
+            width: 45%;
+            background-color: rgba(203, 4, 107, 0.05);
+            margin-right: 20px;
+            border-radius: 5px;
+
+            &__img{
+                @include mixins.format-image;
+            }
+            }   
+
+            &__intro{
+                width:45%;
+                font-size: clamp(2rem, 8vw, 7rem);
+                margin-left: 20px;
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -54,15 +155,48 @@ h3{
         text-align: center;
     }
 
-    &__content{
-        @include mixins.format-content-text($content-font-size, 95%, 35px, left);
+    &__contents-container{
+        
+        &__content{
+            @include mixins.format-content-text($content-font-size, 95%, 35px, left);
+        }
+
+        &__img-container{
+            @include mixins.img-container-lg;
+
+            &__img{
+                @include mixins.format-image;
+                border-radius: 5px;
+                filter: saturate(35%) hue-rotate(159deg);
+            }
+        }   
     }
+    
+    @include mixins.lg-screen{
+        
+        &__title{
+            position: relative;
+            left: 13px;
+            top: 50px;
+        }
 
-    &__img-container{
-        @include mixins.img-container-lg(65%, 65vh);
+        &__contents-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        &__img{
-            @include mixins.format-image;
+            &__img-container{
+                width: 35%;
+
+                &__img{
+                    width: 90%;
+                }
+            }
+
+            &__content{
+                width: 55%;
+                font-size: clamp(1rem, 2.5vw, 1.3rem)
+            }
         }
     }
 }
@@ -106,6 +240,24 @@ h3{
                     font-size: clamp(0.5rem, 3vw, 1.5rem);
                 }
             }
+        }
+    }
+
+    @include mixins.lg-screen{
+        &__logos-container{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            &__row{
+                max-width: 50%;
+
+                &__img-and-label__label{
+                    font-size: clamp(0.5rem, 1.25vw, 1rem);
+                }
+            }
+            
         }
     }
 }
@@ -170,25 +322,25 @@ h3{
             padding: 0 10px;
 
             &__btn{
+                @include mixins.format-button;
                 margin-right: 20px;
-                padding: 8px 10px;
-                background-color: rgba(255, 255, 255, 0.1);
-                border: 1px solid black;
-                border-radius: 4px;
-                transition: background-color 0.1s ease-out; 
+
+                    &__:hover{
+                    @include mixins.button-hover;
+                }
+
+                &__:active{
+                    @include mixins.button-active;
+                }
+
 
                 &__link{
-                    text-decoration: none;
-                    color: black;
+                    @include mixins.link-in-button;
+                    
+                    &:hover{
+                        @include mixins.link-in-button-hover;
+                    }
                 }
-            }
-
-            &__btn:hover{
-                background-color: $btn-hover;
-            }
-
-            &__btn:active{
-                background-color: $btn-active;
             }
         }
     }
