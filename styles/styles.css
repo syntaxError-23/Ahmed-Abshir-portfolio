@@ -1,3 +1,11 @@
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
 .nav {
   display: none;
 }
@@ -18,35 +26,52 @@
   text-align: center;
   margin-bottom: 75px;
 }
-.about-me__img-placeholder {
+.about-me__title {
+  margin-bottom: 10px;
+}
+.about-me__img-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 15px;
   border-radius: 5px;
   width: 95%;
   height: 40vh;
-  background-color: slateblue;
   margin: 0 auto;
   color: white;
   font-weight: bold;
+  overflow: hidden;
+}
+.about-me__img-container__img {
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .skills {
   text-align: center;
 }
-.skills__logos-placeholder {
+.skills__logos-container {
+  background-color: rgba(93, 179, 255, 0.1);
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+.skills__logos-container__row {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills__logos-container__row__img-and-label {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
-  border-radius: 5px;
-  width: 95%;
-  height: 40vh;
-  background-color: slateblue;
-  margin: 0 auto;
-  color: white;
+  max-width: 25%;
+}
+.skills__logos-container__row__img-and-label__img {
+  max-width: 90%;
+}
+.skills__logos-container__row__img-and-label__label {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .projects {
@@ -54,12 +79,15 @@
   flex-direction: column;
   align-items: center;
 }
+.projects__title {
+  margin-bottom: 10px;
+}
 .projects__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
-  background-color: rgb(193, 223, 249);
+  background-color: rgba(93, 179, 255, 0.1);
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 5px;
@@ -67,21 +95,26 @@
 }
 .projects__card__img-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   font-size: 15px;
   border-radius: 5px;
   width: 95%;
   height: 40vh;
-  background-color: slateblue;
   margin: 0 auto;
   color: white;
   font-weight: bold;
+  overflow: hidden;
   overflow: hidden;
 }
 .projects__card__img-container__img {
   max-width: 100%;
   object-fit: cover;
+}
+.projects__card__chronos {
+  background-color: rgba(39, 9, 83, 0.85);
+}
+.projects__card__wallet-wizard {
+  background-color: rgba(0, 0, 76, 0.85);
 }
 .projects__card__text-wrapper {
   width: 95%;
@@ -92,12 +125,35 @@
   font-size: 1rem;
 }
 .projects__card__text-wrapper__name {
-  margin-top: 5px;
-  font-size: 2rem;
-  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 15px;
 }
 .projects__card__text-wrapper__description {
   font-size: 1.1em;
+  margin-top: 5px;
+}
+.projects__card__btn-wrapper {
+  display: flex;
+  width: 95%;
+  padding: 0 10px;
+}
+.projects__card__btn-wrapper__btn {
+  margin-right: 20px;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: background-color 0.1s ease-out;
+}
+.projects__card__btn-wrapper__btn__link {
+  text-decoration: none;
+  color: black;
+}
+.projects__card__btn-wrapper__btn:hover {
+  background-color: rgba(193, 223, 249, 0.85);
+}
+.projects__card__btn-wrapper__btn:active {
+  background-color: rgba(106, 88, 243, 0.5);
 }
 
 .footer {
@@ -105,19 +161,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.95);
   padding: 10px 0;
   color: white;
   height: 15vh;
+  margin-top: 20px;
 }
 .footer__logos-container {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
+  width: 75%;
 }
 .footer__logos-container__logo-placeholder {
   background-color: rgb(107, 107, 216);
-  border-radius: 360%;
   padding: 10px;
 }
 .footer__email {

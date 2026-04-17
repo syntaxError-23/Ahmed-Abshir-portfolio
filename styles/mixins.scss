@@ -39,19 +39,22 @@ $xxl: 1536px;
 }
 
 // ---------- MIXINS - RECURRING ----------
-
 @mixin img-placeholder-lg{
         display: flex;
-        justify-content: center;
         align-items: center;
         font-size: 15px;
         border-radius: 5px;
         width:95%;
         height: 40vh;
-        background-color: slateblue;
         margin: 0 auto;
         color: white;
         font-weight: bold;
+        overflow: hidden;
+}
+
+@mixin format-image{
+    max-width: 100%;
+    object-fit: cover;
 }
 
 

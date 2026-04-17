@@ -1,13 +1,26 @@
 // ---------- MODULES ----------
 @use "./mixins.scss";
 
-// --------- NAV STYLES ----------
+// ---------- MODULES ----------
+$card-bg: rgba(93, 179, 255, 0.1);
+$btn-hover: rgba(193, 223, 249, 0.85);
+$btn-active: rgba(106, 88, 243, 0.5);
+
+// ---------- GLOBAL STYLES ----------
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+// ---------- NAV STYLES ----------
 .nav{
     display: none;
 }
 
 // ---------- HERO STYLES ----------
-
 .hero{
     text-align: center;
     margin-bottom: 75px;
@@ -27,8 +40,16 @@
     text-align: center;
     margin-bottom: 75px;
 
-    &__img-placeholder{
+    &__title{
+        margin-bottom: 10px;
+    }
+
+    &__img-container{
         @include mixins.img-placeholder-lg;
+
+        &__img{
+            @include mixins.format-image;
+        }
     }
 }
 
@@ -36,8 +57,35 @@
 .skills{
     text-align: center;
 
-    &__logos-placeholder{
-        @include mixins.img-placeholder-lg;
+    &__logos-container{
+
+        background-color: $card-bg;
+        padding: 10px 5px;
+        border-radius: 5px;
+
+        &__row{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            &__img-and-label{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 25%;
+
+                &__img{
+                    max-width: 90%;                
+                }
+
+                &__label{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
 }
 
@@ -48,12 +96,16 @@
     flex-direction: column;
     align-items: center;
 
+    &__title{
+        margin-bottom: 10px;
+    }
+
     &__card{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: left;
-        background-color: rgb(193, 223, 249);
+        background-color: $card-bg;
         margin-bottom: 15px;
         padding: 10px;
         border-radius: 5px;
@@ -63,11 +115,17 @@
             @include mixins.img-placeholder-lg;
             overflow: hidden;
 
-
             &__img{
-                max-width: 100%;
-                object-fit: cover;
+                @include mixins.format-image;
             }
+        }
+
+        &__chronos{
+                background-color: rgba(39, 9, 83, 0.85);
+        }
+        
+        &__wallet-wizard{
+                background-color: rgba(0, 0, 76, 0.85);
         }
 
         &__text-wrapper{
@@ -80,13 +138,41 @@
             }
 
             &__name{
-                margin-top:5px;
-                font-size: 2rem;
-                font-weight: bold;
+                margin-top: 2px;
+                margin-bottom: 15px;
             }
 
             &__description{
                 font-size: 1.1em;
+                margin-top: 5px;
+            }
+        }
+
+        &__btn-wrapper{
+            display: flex;
+            width: 95%;
+            padding: 0 10px;
+
+            &__btn{
+                margin-right: 20px;
+                padding: 8px 10px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 1px solid black;
+                border-radius: 4px;
+                transition: background-color 0.1s ease-out; 
+
+                &__link{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            &__btn:hover{
+                background-color: $btn-hover;
+            }
+
+            &__btn:active{
+                background-color: $btn-active;
             }
         }
     }
@@ -98,19 +184,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: black;
+    background-color: rgba(0,0,0,0.95);
     padding: 10px 0;
     color: white;
     height: 15vh;
+    margin-top: 20px;
 
     &__logos-container{
         display: flex;
         justify-content: space-between;
-        width: 50vw;
+        width: 75%;
 
         &__logo-placeholder{
             background-color: rgb(107, 107, 216);
-            border-radius: 360%;
+            // border-radius: 360%;
             padding: 10px;
         }
     }
@@ -118,7 +205,6 @@
     &__email{
         margin: 0;
     }
-
 }
 
 
