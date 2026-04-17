@@ -1,18 +1,26 @@
 // ---------- MODULES ----------
 @use "./mixins.scss";
 
-// ---------- MODULES ----------
+// ---------- VARIABLES ----------
 $card-bg: rgba(93, 179, 255, 0.1);
 $btn-hover: rgba(193, 223, 249, 0.85);
 $btn-active: rgba(106, 88, 243, 0.5);
-
+$content-font-size: clamp(1rem, 3vw, 1.5rem);
+$content-font-size-sm: 1.1rem;
 // ---------- GLOBAL STYLES ----------
+body{
+    @include mixins.miranda-font;
+    background-color: rgb(238, 255, 255);
+}
+
 h2{
     font-size: 2rem;
+    margin-bottom: 35px;
 }
 
 h3{
     font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 // ---------- NAV STYLES ----------
@@ -22,30 +30,36 @@ h3{
 
 // ---------- HERO STYLES ----------
 .hero{
-    text-align: center;
+    width: 100%;
     margin-bottom: 75px;
 
     &__greeting{
-        font-size: 20px;
+        @include mixins.format-content-text($content-font-size-sm, 75%, 25px, left);
     }
 
     &__intro{
-        font-size: 40px;
+        @include mixins.format-content-text(clamp(2rem, 15vw, 6.5rem), 75%, 0, left);
+        // word-break: break-word;
+        font-weight: 600;
         margin-top: 20px;
     }
 }
 
+
 // ---------- ABOUT ME SECTION STYLES ----------
 .about-me{
-    text-align: center;
     margin-bottom: 75px;
 
     &__title{
-        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__content{
+        @include mixins.format-content-text($content-font-size, 95%, 35px, left);
     }
 
     &__img-container{
-        @include mixins.img-placeholder-lg;
+        @include mixins.img-container-lg(65%, 65vh);
 
         &__img{
             @include mixins.format-image;
@@ -57,9 +71,11 @@ h3{
 .skills{
     text-align: center;
 
-    &__logos-container{
+    &__intro{
+        @include mixins.format-content-text($content-font-size, 95%, 35px, left);
+    }
 
-        background-color: $card-bg;
+    &__logos-container{
         padding: 10px 5px;
         border-radius: 5px;
 
@@ -77,12 +93,17 @@ h3{
                 max-width: 25%;
 
                 &__img{
-                    max-width: 90%;                
+                    max-width: 90%; 
+                    transition: transform 0.2s ease-out;
+                }
+
+                &__img:hover{
+                    transform: scale(1.25)
                 }
 
                 &__label{
                     font-weight: bold;
-                    font-size: 1.5rem;
+                    font-size: clamp(0.5rem, 3vw, 1.5rem);
                 }
             }
         }
@@ -96,10 +117,6 @@ h3{
     flex-direction: column;
     align-items: center;
 
-    &__title{
-        margin-bottom: 10px;
-    }
-
     &__card{
         display: flex;
         flex-direction: column;
@@ -112,7 +129,7 @@ h3{
         width: 90vw;
 
         &__img-container{
-            @include mixins.img-placeholder-lg;
+            @include mixins.img-container-lg;
             overflow: hidden;
 
             &__img{
@@ -143,8 +160,7 @@ h3{
             }
 
             &__description{
-                font-size: 1.1em;
-                margin-top: 5px;
+                @include mixins.format-content-text(1.3rem, 100%, 20px, left);
             }
         }
 
@@ -184,7 +200,7 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0,0,0,0.9);
     padding: 10px 0;
     color: white;
     height: 15vh;
@@ -192,13 +208,25 @@ h3{
 
     &__logos-container{
         display: flex;
-        justify-content: space-between;
-        width: 75%;
+        justify-content: space-around;
+        width: 40%;
 
-        &__logo-placeholder{
-            background-color: rgb(107, 107, 216);
-            // border-radius: 360%;
-            padding: 10px;
+        &__logo-link, &__logo-link:hover, &__logo-link:visited, &__logo-link:active{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &__logo-link{
+             &__logo-svg{
+                transform: scale(1.5);
+                transition: transform 0.2s ease-out;
+                fill: azure !important;
+            }
+
+            &__logo-svg:hover{
+                transform: scale(2.3);
+            }
+           
         }
     }
 

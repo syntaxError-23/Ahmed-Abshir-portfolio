@@ -1,5 +1,5 @@
 // -------------------- VARIABLES --------------------
-
+$miranda-font: "Miranda Sans", sans-serif;
 //---------- SCREEN SIZE VARIABLES ----------
 $sm: 640px;
 $md: 768px;
@@ -39,13 +39,13 @@ $xxl: 1536px;
 }
 
 // ---------- MIXINS - RECURRING ----------
-@mixin img-placeholder-lg{
+@mixin img-container-lg($width: 95%, $height: 50vh){
         display: flex;
         align-items: center;
         font-size: 15px;
         border-radius: 5px;
-        width:95%;
-        height: 40vh;
+        width: $width;
+        height: $height;
         margin: 0 auto;
         color: white;
         font-weight: bold;
@@ -55,6 +55,20 @@ $xxl: 1536px;
 @mixin format-image{
     max-width: 100%;
     object-fit: cover;
+}
+
+@mixin miranda-font($weight: 400){
+    font-family: $miranda-font;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+@mixin format-content-text($font-size: 1.5rem, $width: 90%, $margin-y: 10px, $text-align: center){
+    margin: $margin-y auto;
+    width: $width;
+    text-align: $text-align;
+    font-size: $font-size;
 }
 
 
