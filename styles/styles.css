@@ -15,6 +15,11 @@ h2 {
   font-size: 2rem;
   margin-bottom: 35px;
 }
+@media only screen and (min-width: 769px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
 
 h3 {
   font-size: 1.8rem;
@@ -27,13 +32,15 @@ h3 {
 @media only screen and (min-width: 769px) {
   .nav {
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     background-color: rgba(208, 237, 237, 0.95);
     border-radius: 5px;
     box-shadow: 0px 13px 22px 12px rgba(0, 0, 0, 0.05);
     position: sticky;
-    top: 0;
+    top: 5px;
     z-index: 1000;
+    width: 99%;
   }
   .nav__brand {
     margin-left: 50px;
@@ -107,6 +114,7 @@ h3 {
   .hero {
     padding: 10px;
     min-height: 60vh;
+    margin-bottom: 200px;
   }
   .hero__greeting {
     width: 95%;
@@ -119,18 +127,19 @@ h3 {
   }
   .hero__hero-contents__img-container {
     display: block;
+    overflow: hidden;
     width: 45%;
     background-color: rgba(203, 4, 107, 0.05);
     margin-right: 20px;
     border-radius: 5px;
   }
   .hero__hero-contents__img-container__img {
-    width: 100%;
+    min-width: 100%;
     object-fit: cover;
   }
   .hero__hero-contents__intro {
     width: 45%;
-    font-size: clamp(2rem, 8vw, 7rem);
+    font-size: clamp(4.5rem, 8vw, 7rem);
     margin-left: 20px;
     margin-right: 0;
   }
@@ -142,7 +151,10 @@ h3 {
 .about-me__title {
   text-align: center;
 }
-.about-me__contents-container__content {
+.about-me__contents-container__text-and-title__title-lg {
+  display: none;
+}
+.about-me__contents-container__text-and-title__content {
   margin: 35px auto;
   width: 95%;
   text-align: left;
@@ -153,7 +165,7 @@ h3 {
   align-items: center;
   font-size: 15px;
   border-radius: 5px;
-  width: 95%;
+  width: 65%;
   height: 50vh;
   margin: 0 auto;
   color: white;
@@ -161,31 +173,39 @@ h3 {
   overflow: hidden;
 }
 .about-me__contents-container__img-container__img {
-  width: 100%;
+  min-width: 100%;
   object-fit: cover;
   border-radius: 5px;
   filter: saturate(35%) hue-rotate(159deg);
 }
 @media only screen and (min-width: 769px) {
   .about-me__title {
-    position: relative;
-    left: 13px;
-    top: 50px;
+    display: none;
   }
   .about-me__contents-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  .about-me__contents-container__text-and-title {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+  }
+  .about-me__contents-container__text-and-title__title-lg {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .about-me__contents-container__text-and-title__content {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    width: 100%;
+    margin-top: 5px;
+  }
   .about-me__contents-container__img-container {
     width: 35%;
   }
   .about-me__contents-container__img-container__img {
     width: 90%;
-  }
-  .about-me__contents-container__content {
-    width: 55%;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
   }
 }
 
@@ -270,7 +290,7 @@ h3 {
   overflow: hidden;
 }
 .projects__card__img-container__img {
-  width: 100%;
+  min-width: 100%;
   object-fit: cover;
 }
 .projects__card__chronos {
@@ -310,12 +330,12 @@ h3 {
   padding: 0;
   margin-right: 20px;
 }
-.projects__card__btn-wrapper__btn__:hover {
+.projects__card__btn-wrapper__btn:hover {
   background-color: rgba(255, 255, 255, 0.85);
   border: 1px solid rgb(133, 176, 233);
   cursor: pointer;
 }
-.projects__card__btn-wrapper__btn__:active {
+.projects__card__btn-wrapper__btn:active {
   background-color: rgba(106, 88, 243, 0.5);
 }
 .projects__card__btn-wrapper__btn__link {

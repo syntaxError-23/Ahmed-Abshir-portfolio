@@ -54,7 +54,7 @@ $xxl: 1536px;
 }
 
 @mixin format-image{
-    width: 100%;
+    min-width: 100%;
     object-fit: cover;
 }
 

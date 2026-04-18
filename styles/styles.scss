@@ -21,6 +21,10 @@ body{
 h2{
     font-size: 2rem;
     margin-bottom: 35px;
+
+    @include mixins.lg-screen{
+        font-size: 2.5rem;
+    }
 }
 
 h3{
@@ -35,13 +39,15 @@ h3{
     // ----- NAV - LARGE SCREENS -----
     @include mixins.lg-screen{
         display: flex;
+        margin: 0 auto;
         justify-content: space-between;
         background-color: rgba(208, 237, 237, 0.95);
         border-radius: 5px;
         box-shadow: 0px 13px 22px 12px rgba(0,0,0,0.05);
         position: sticky;
-        top: 0;
+        top: 5px;
         z-index: 1000;
+        width: 99%;
 
         &__brand{
             margin-left: 50px;
@@ -113,6 +119,7 @@ h3{
     @include mixins.lg-screen{
         padding: 10px;
         min-height: 60vh;
+        margin-bottom: 200px;
 
         &__greeting{
             width: 95%;
@@ -126,6 +133,7 @@ h3{
 
             &__img-container{
             display: block;
+            overflow: hidden;
             width: 45%;
             background-color: rgba(203, 4, 107, 0.05);
             margin-right: 20px;
@@ -138,7 +146,7 @@ h3{
 
             &__intro{
                 width:45%;
-                font-size: clamp(2rem, 8vw, 7rem);
+                font-size: clamp(4.5rem, 8vw, 7rem);
                 margin-left: 20px;
                 margin-right: 0;
             }
@@ -156,13 +164,19 @@ h3{
     }
 
     &__contents-container{
-        
-        &__content{
-            @include mixins.format-content-text($content-font-size, 95%, 35px, left);
-        }
 
+        &__text-and-title{
+            &__title-lg{
+                display:none;
+            }
+
+            &__content{
+                @include mixins.format-content-text($content-font-size, 95%, 35px, left);
+            }
+        }
+        
         &__img-container{
-            @include mixins.img-container-lg;
+            @include mixins.img-container-lg($width: 65%);
 
             &__img{
                 @include mixins.format-image;
@@ -171,19 +185,37 @@ h3{
             }
         }   
     }
+
+
     
     @include mixins.lg-screen{
         
         &__title{
-            position: relative;
-            left: 13px;
-            top: 50px;
+            display: none;
         }
 
         &__contents-container{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
+
+            &__text-and-title{
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+                
+                &__title-lg{
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                
+                &__content{
+                font-size: clamp(1rem, 2.5vw, 1.3rem);
+                width: 100%;
+                margin-top: 5px;
+                }
+            }
 
             &__img-container{
                 width: 35%;
@@ -191,11 +223,6 @@ h3{
                 &__img{
                     width: 90%;
                 }
-            }
-
-            &__content{
-                width: 55%;
-                font-size: clamp(1rem, 2.5vw, 1.3rem)
             }
         }
     }
@@ -325,11 +352,11 @@ h3{
                 @include mixins.format-button;
                 margin-right: 20px;
 
-                    &__:hover{
+                &:hover{
                     @include mixins.button-hover;
                 }
 
-                &__:active{
+                &:active{
                     @include mixins.button-active;
                 }
 
@@ -378,7 +405,6 @@ h3{
             &__logo-svg:hover{
                 transform: scale(2.3);
             }
-           
         }
     }
 
