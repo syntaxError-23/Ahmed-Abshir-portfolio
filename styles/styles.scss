@@ -22,7 +22,7 @@ html{
 
 body{
     @include mixins.miranda-font;
-    background-color: rgb(245, 255, 255);
+    background-color: rgb(255, 254, 254);
 }
 
 h2{
@@ -254,7 +254,7 @@ h3{
     text-align: center;
 
     &__intro{
-        @include mixins.format-content-text($content-font-size, 95%, 35px, left);
+        @include mixins.format-content-text($content-font-size, 95%, 35px, center);
     }
 
     &__logos-container{
@@ -392,6 +392,7 @@ h3{
                     &__btn{
                         @include mixins.format-button;
                         margin-right: 20px;
+                        transition: background-color 0.2s ease-out;
 
                         &:hover{
                             @include mixins.button-hover;
@@ -493,6 +494,20 @@ h3{
 
     &__email{
         margin: 0;
+    }
+
+    @include mixins.lg-screen{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        &__logos-container{
+            max-width: 20%;
+            margin-right: 25px;
+        }
+
+        &__email{
+            margin-left: 25px;
+        }
     }
 }
 

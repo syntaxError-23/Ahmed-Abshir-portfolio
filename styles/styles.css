@@ -8,7 +8,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: rgb(245, 255, 255);
+  background-color: rgb(255, 254, 254);
 }
 
 h2 {
@@ -229,7 +229,7 @@ h3 {
 .skills__intro {
   margin: 35px auto;
   width: 95%;
-  text-align: left;
+  text-align: center;
   font-size: clamp(1.3rem, 3vw, 1.5rem);
 }
 .skills__logos-container {
@@ -361,6 +361,7 @@ h3 {
   transition: background-color 0.1s ease-out;
   padding: 0;
   margin-right: 20px;
+  transition: background-color 0.2s ease-out;
 }
 .projects__card-container__card-row__card__btn-wrapper__btn:hover {
   background-color: rgba(255, 255, 255, 0.85);
@@ -438,4 +439,17 @@ h3 {
 }
 .footer__email {
   margin: 0;
+}
+@media only screen and (min-width: 769px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .footer__logos-container {
+    max-width: 20%;
+    margin-right: 25px;
+  }
+  .footer__email {
+    margin-left: 25px;
+  }
 }
