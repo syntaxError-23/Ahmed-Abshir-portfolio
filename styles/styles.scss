@@ -60,12 +60,62 @@ h3{
         z-index: 1000;
         width: 99%;
 
-        &__brand{
-            margin-left: 50px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: rgb(44, 77, 108);
+        &__brand-container{
+            display: grid;
+            
+            #navBrand #navBrandHover{
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            &__brand{
+                margin-left: 50px;
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: rgb(44, 77, 108);
+                width: 100%;
+                transition: opacity 0.25s ease-out;
+
+
+            }
+
+            &__brand-hover{
+                font-size: 0;
+                margin-left: 50px;
+                font-weight: 700;
+                color: rgb(44, 77, 108);
+                opacity: 0%;
+                transition: opacity 0.25s ease-out;
+                transition-delay: 0.1s;
+                color: rgb(131, 60, 131);
+            }
+
+            
+
+            &:hover{
+
+                #navBrand{
+                    font-size: 0;
+                    opacity: 0%;
+                }
+
+                #navBrandHover{
+                    font-size: 1.3rem;
+                    opacity: 100%;
+                }
+
+                cursor: default;
+            }
+
+
+             
         }
+
+       
+
+
+
+
 
         &__links-container{
             display: flex;
@@ -201,7 +251,7 @@ h3{
             &__img{
                 @include mixins.format-image;
                 border-radius: 5px;
-                filter: saturate(35%) hue-rotate(159deg);
+                // filter: saturate(110%) grayscale(50%);
             }
         }   
     }

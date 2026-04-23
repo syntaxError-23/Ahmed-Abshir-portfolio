@@ -47,11 +47,41 @@ h3 {
     z-index: 1000;
     width: 99%;
   }
-  .nav__brand {
+  .nav__brand-container {
+    display: grid;
+  }
+  .nav__brand-container #navBrand #navBrandHover {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .nav__brand-container__brand {
     margin-left: 50px;
     font-weight: 700;
     font-size: 1.3rem;
     color: rgb(44, 77, 108);
+    width: 100%;
+    transition: opacity 0.25s ease-out;
+  }
+  .nav__brand-container__brand-hover {
+    font-size: 0;
+    margin-left: 50px;
+    font-weight: 700;
+    color: rgb(44, 77, 108);
+    opacity: 0%;
+    transition: opacity 0.25s ease-out;
+    transition-delay: 0.1s;
+    color: rgb(131, 60, 131);
+  }
+  .nav__brand-container:hover #navBrand {
+    font-size: 0;
+    opacity: 0%;
+  }
+  .nav__brand-container:hover #navBrandHover {
+    font-size: 1.3rem;
+    opacity: 100%;
+  }
+  .nav__brand-container:hover {
+    cursor: default;
   }
   .nav__links-container {
     display: flex;
@@ -189,7 +219,6 @@ h3 {
   min-width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  filter: saturate(35%) hue-rotate(159deg);
 }
 @media only screen and (min-width: 769px) {
   .about-me__title {

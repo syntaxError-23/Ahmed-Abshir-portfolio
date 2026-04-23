@@ -13,7 +13,11 @@
 <body>
     <!-- ---------- NAVIGATION ---------- -->
     <nav class="nav">
-        <p class="nav__brand">Ahmed Abshir</p>
+        <div class="nav__brand-container">
+            <p class="nav__brand-container__brand" id="navBrand">Ahmed Abshir</p>
+            <p class="nav__brand-container__brand-hover" id='navBrandHover'>syntaxError-23</p>
+        </div>
+        
         
         <div class="nav__links-container">
             <a href="#home" class="nav__links-container__link">Home</a>
@@ -28,7 +32,7 @@
         <div class="hero__hero-contents">
             <p class="hero__hero-contents__intro"> A Junior Software Developer based in the UK</p>
             <div class="hero__hero-contents__img-container">
-                <img src="./assets/misc/programming.svg" alt="" class="hero__hero-contents__img-container__img">
+                <img src="./assets/misc/programming.svg" alt="Graphic depicting a developer working" class="hero__hero-contents__img-container__img">
             </div>
         </div>
         
@@ -40,12 +44,12 @@
 
         <div class="about-me__contents-container">
             <div class="about-me__contents-container__img-container">
-                <img src="./assets/misc/computer.jpg" alt="Desk with a computer set up" class="about-me__contents-container__img-container__img">
+                <img src="./assets/misc/Me.jpeg" alt="A picture of me" class="about-me__contents-container__img-container__img">
             </div>
 
             <div class="about-me__contents-container__text-and-title">
                 <h2 class="about-me__contents-container__text-and-title__title-lg">About Me</h2>
-                <p class="about-me__contents-container__text-and-title__content">Hi. I’m Ahmed, a junior software developer with a passion for creating robust, accessible applications using a wide range of technologies. I have experience working with modern technologies such as javascript and react, to create beautiful, feature-rich applications. As a naturally inquisitive person, I love to question and learn about the mechanisms of the technologies I use. With this curiosity and adeptness at problem solving, I find novel approaches addressing issues and building lasting architecture</p>
+                <p class="about-me__contents-container__text-and-title__content">Hi. I’m Ahmed, a junior software developer with a passion for creating robust, accessible applications using a wide range of technologies. I have experience working with modern technologies such as javascript and react, to create beautiful, feature-rich applications. As a naturally inquisitive person, I love to question and learn about the mechanisms of the technologies I use. With this curiosity and an adeptness at problem solving, I find novel approaches to addressing issues and building lasting architecture</p>
             </div>
         </div>
         
@@ -53,7 +57,6 @@
 <!-- -------------------- SKILLS -------------------- -->
     <section class="skills">
         <h2 class="skills__title">Technical Skills</h2>
-        <p class="skills__intro">I have experience working with various technologies, including both front-end and back-end technologies</p>
 
         <!-- ----- LOGOS ----- -->
         <div class="skills__logos-container">
@@ -200,13 +203,13 @@
     <footer class="footer" id="contact">
         <article class="footer__logos-container">
                 <a target="_blank" href="https://github.com/syntaxError-23" class="footer__logos-container__logo-link">
-                    <svg class="footer__logos-container__logo-link__logo-svg"xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from TDesign Icons by TDesign - https://github.com/Tencent/tdesign-icons/blob/main/LICENSE --><path fill="currentColor" d="M12 .999c-6.074 0-11 5.05-11 11.278c0 4.983 3.152 9.21 7.523 10.702c.55.104.727-.246.727-.543v-2.1c-3.06.683-3.697-1.33-3.697-1.33c-.5-1.304-1.222-1.65-1.222-1.65c-.998-.7.076-.686.076-.686c1.105.08 1.686 1.163 1.686 1.163c.98 1.724 2.573 1.226 3.201.937c.098-.728.383-1.226.698-1.508c-2.442-.286-5.01-1.253-5.01-5.574c0-1.232.429-2.237 1.132-3.027c-.114-.285-.49-1.432.107-2.985c0 0 .924-.303 3.026 1.156c.877-.25 1.818-.375 2.753-.38c.935.005 1.876.13 2.755.38c2.1-1.459 3.023-1.156 3.023-1.156c.598 1.554.222 2.701.108 2.985c.706.79 1.132 1.796 1.132 3.027c0 4.332-2.573 5.286-5.022 5.565c.394.35.754 1.036.754 2.088v3.095c0 .3.176.652.734.542C19.852 21.484 23 17.258 23 12.277C23 6.048 18.075.999 12 .999"/></svg>
+                    <svg aria-label="Github logo"" class="footer__logos-container__logo-link__logo-svg"xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from TDesign Icons by TDesign - https://github.com/Tencent/tdesign-icons/blob/main/LICENSE --><path fill="currentColor" d="M12 .999c-6.074 0-11 5.05-11 11.278c0 4.983 3.152 9.21 7.523 10.702c.55.104.727-.246.727-.543v-2.1c-3.06.683-3.697-1.33-3.697-1.33c-.5-1.304-1.222-1.65-1.222-1.65c-.998-.7.076-.686.076-.686c1.105.08 1.686 1.163 1.686 1.163c.98 1.724 2.573 1.226 3.201.937c.098-.728.383-1.226.698-1.508c-2.442-.286-5.01-1.253-5.01-5.574c0-1.232.429-2.237 1.132-3.027c-.114-.285-.49-1.432.107-2.985c0 0 .924-.303 3.026 1.156c.877-.25 1.818-.375 2.753-.38c.935.005 1.876.13 2.755.38c2.1-1.459 3.023-1.156 3.023-1.156c.598 1.554.222 2.701.108 2.985c.706.79 1.132 1.796 1.132 3.027c0 4.332-2.573 5.286-5.022 5.565c.394.35.754 1.036.754 2.088v3.095c0 .3.176.652.734.542C19.852 21.484 23 17.258 23 12.277C23 6.048 18.075.999 12 .999"/></svg>
                 </a>
                 <a href="" class="footer__logos-container__logo-link">
-                    <svg class="footer__logos-container__logo-link__logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+                    <svg aria-label="LinkedIn Logo" class="footer__logos-container__logo-link__logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE --><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
                 </a>
                 <a href="" class="footer__logos-container__logo-link">
-                    <svg class="footer__logos-container__logo-link__logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 2l.117.007a1 1 0 0 1 .876.876L13 3v4l.005.15a2 2 0 0 0 1.838 1.844L15 9h4l.117.007a1 1 0 0 1 .876.876L20 10v9a3 3 0 0 1-2.824 2.995L17 22H7a3 3 0 0 1-2.995-2.824L4 19V5a3 3 0 0 1 2.824-2.995L7 2zm-2.5 8A2.5 2.5 0 0 0 7 12.5v3a2.5 2.5 0 1 0 5 0a1 1 0 0 0-2 0a.5.5 0 1 1-1 0v-3a.5.5 0 1 1 1 0a1 1 0 0 0 2 0A2.5 2.5 0 0 0 9.5 10m6.743.03a1 1 0 0 0-1.213.727l-.53 2.119l-.53-2.119a1 1 0 1 0-1.94.486l1.5 6c.252 1.01 1.688 1.01 1.94 0l1.5-6a1 1 0 0 0-.727-1.213m-1.244-7.031L19 7h-4z"/></svg>
+                    <svg aria-label="CV icon" class="footer__logos-container__logo-link__logo-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="currentColor" d="m12 2l.117.007a1 1 0 0 1 .876.876L13 3v4l.005.15a2 2 0 0 0 1.838 1.844L15 9h4l.117.007a1 1 0 0 1 .876.876L20 10v9a3 3 0 0 1-2.824 2.995L17 22H7a3 3 0 0 1-2.995-2.824L4 19V5a3 3 0 0 1 2.824-2.995L7 2zm-2.5 8A2.5 2.5 0 0 0 7 12.5v3a2.5 2.5 0 1 0 5 0a1 1 0 0 0-2 0a.5.5 0 1 1-1 0v-3a.5.5 0 1 1 1 0a1 1 0 0 0 2 0A2.5 2.5 0 0 0 9.5 10m6.743.03a1 1 0 0 0-1.213.727l-.53 2.119l-.53-2.119a1 1 0 1 0-1.94.486l1.5 6c.252 1.01 1.688 1.01 1.94 0l1.5-6a1 1 0 0 0-.727-1.213m-1.244-7.031L19 7h-4z"/></svg>
                 </a>
         </article>
         
